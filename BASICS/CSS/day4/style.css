@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000, #8B0000);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top SVG wave */
+.svg-bg:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    line-height: 0;
+    transform: rotate(180deg) translateY(30%);
+    pointer-events: none;
+}
+
+/* Bottom SVG wave */
+.svg-bg:nth-of-type(2) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    line-height: 0;
+    transform: translateY(30%);
+    pointer-events: none;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+p {
+    color: #cccccc;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1rem;
+}
+
+input[type="email"] {
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input[type="email"]::placeholder {
+    color: #999;
+}
+
+button {
+    padding: 0.6rem;
+    background-color: #FF0000;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: white;
+    color: #FF0000;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
