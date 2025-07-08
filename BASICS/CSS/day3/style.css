@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body, html{
+    background-color: rgb(124, 124, 124);
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    height: 100%;
+}
+
+.container {
+    background: linear-gradient(135deg, black, rgb(241, 84, 84));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 360px;
+    width: 90%;
+}
+
+.logo{
+    width: 200px;
+    height: ;
+    object-fit: contain;
+}
+
+h1{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p{
+    color: #666;
+    margin-bottom: px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+input[type="email"]{
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+button{
+    padding: 0.5rem;
+    background-color: red;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgb(146, 145, 145) ;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: black;
+    color: #ccc;
+}
+
+svg{
+    position: absolute;
+}
