@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Gallery</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 100px 200px 100px;
+      gap: 8px;
+    }
+    .item {
+      border: 1px solid black;
+      overflow: hidden;
+    }
+    /* .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease;
+    }
+    .item img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }    */
+    /* .item img {
+  filter: sepia(50%) contrast(120%) brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+.item:hover img {
+  filter: sepia(0%) contrast(100%) brightness(100%);
+} */
+.item {
+  position: relative;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover::after {
+  opacity: 1;
+}
+
+    .item1 { 
+             grid-column: span 2; 
+             grid-row: span 1; }
+    .item2 { 
+             grid-column: span 1; 
+             grid-row: span 2; }
+    .item6 { 
+             grid-column: span 2; 
+             grid-row: span 1; }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item item1">
+        <img src="https://picsum.photos/600/400?random=2">
+    </div>
+    <div class="item item2">
+        <img src="https://picsum.photos/600/400?random=3" >
+    </div>
+    <div class="item item3">
+        <img src="https://picsum.photos/600/400?random=4" >
+    </div>
+    <div class="item item4">
+        <img src="https://picsum.photos/600/400?random=1">
+    </div>
+    <div class="item item5">
+        <img src="https://picsum.photos/600/400?random=5">
+    </div>
+    <div class="item item6">
+        <img src="https://picsum.photos/600/400?random=6" >
+    </div>
+  </div>
+</body>
+</html>
