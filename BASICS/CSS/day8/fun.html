@@ -26,13 +26,21 @@
 
     .card {
       display: flex;
+      flex-direction: column;
       background: white;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       max-width: 350px;
-      flex-direction: column;
       flex: 1 1 300px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      transition: transform 0.3s ease;
     }
 
     .card-left {
@@ -56,12 +64,6 @@
 
     .card-left img:hover {
       transform: scale(1.05);
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0); }
     }
 
     .logo {
@@ -145,17 +147,30 @@
     }
 
     .buy-btn:hover {
-      transform: scale(1.05);
+      animation: pulse 0.6s ease-in-out;
       background: #2f923d;
     }
 
-    @media (max-width: 768px) {
-      .card {
-        max-width: 100%;
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
-    /* 🌈 Custom Backgrounds for Each Card */
+    /* Card backgrounds */
     .card1-bg {
       background: linear-gradient(135deg, #38a745, #58c06b);
     }
@@ -171,6 +186,12 @@
     .card4-bg {
       background: linear-gradient(135deg, #f7971e, #ffd200);
     }
+
+    @media (max-width: 768px) {
+      .card {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -184,7 +205,7 @@
       </div>
       <div class="card-right">
         <h2>BONNI MAKSUDU</h2>
-        <div class="rating">⭐⭐⭐⭐☆</div>        
+        <div class="rating">⭐⭐⭐⭐☆</div>
         <h4>Limited Collection</h4>
         <ul>
           <li>Can Wash</li>
@@ -205,11 +226,11 @@
     <div class="card">
       <div class="card-left card2-bg">
         <div class="logo">AISHA</div>
-        <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="AISHA">
+        <img src="WhatsApp_Image_2025-07-12_at_12.22.01_AM-removebg-preview.png" alt="AISHA">
       </div>
       <div class="card-right">
         <h2>GAWAAR MAKSUDU</h2>
-        <div class="rating">⭐⭐⭐☆☆</div>        
+        <div class="rating">⭐⭐⭐☆☆</div>
         <h4>Express Edition</h4>
         <ul>
           <li>Big Loud Mouth</li>
@@ -230,11 +251,11 @@
     <div class="card">
       <div class="card-left card3-bg">
         <div class="logo">PALAK</div>
-        <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="PALAK">
+        <img src="image-removebg-preview.png" alt="PALAK">
       </div>
       <div class="card-right">
         <h2>PALAK MAKSUDU</h2>
-        <div class="rating">⭐⭐⭐⭐⭐</div>        
+        <div class="rating">⭐⭐⭐⭐⭐</div>
         <h4>Premium Pack</h4>
         <ul>
           <li>Can Dance</li>
@@ -255,11 +276,11 @@
     <div class="card">
       <div class="card-left card4-bg">
         <div class="logo">JAY</div>
-        <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="JAY">
+        <img src="WhatsApp_Image_2025-07-12_at_12.22.55_AM__1_-removebg-preview.png" alt="JAY">
       </div>
       <div class="card-right">
         <h2>JAY MAKSUDU</h2>
-        <div class="rating">⭐⭐⭐½☆</div>        
+        <div class="rating">⭐⭐⭐½☆</div>
         <h4>Fun Pack</h4>
         <ul>
           <li>Coffee Paglu</li>
