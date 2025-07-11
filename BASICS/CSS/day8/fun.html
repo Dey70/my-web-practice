@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Cards</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      padding: 40px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      display: flex;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      max-width: 350px;
+      flex-direction: column;
+      flex: 1 1 300px;
+    }
+
+    .card-left {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+    }
+
+    .card-left img {
+      max-width: 140px;
+      border-radius: 20px;
+      border: 2px solid white;
+      padding-bottom: 3px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .card-left img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    .logo {
+      font-size: 40px;
+      color: rgba(47, 50, 48, 0.1);
+      font-weight: bold;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .card-right {
+      padding: 30px;
+    }
+
+    .card-right h2 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .rating {
+      font-size: 16px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .card-right h4 {
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .card-right ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .colors {
+      margin-bottom: 20px;
+    }
+
+    .colors span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .colors span:nth-child(1) { background: #8b1d41; }
+    .colors span:nth-child(2) { background: #cd4d2d; }
+    .colors span:nth-child(3) { background: #2f2f2f; }
+    .colors span:nth-child(4) { background: #51555c; }
+
+    .colors span.active {
+      outline: 2px solid black;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #000000;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .buy-btn {
+      background: #40b450;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      transform: scale(1.05);
+      background: #2f923d;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        max-width: 100%;
+      }
+    }
+
+    /* 🌈 Custom Backgrounds for Each Card */
+    .card1-bg {
+      background: linear-gradient(135deg, #38a745, #58c06b);
+    }
+
+    .card2-bg {
+      background: linear-gradient(135deg, #c31432, #ff4e50);
+    }
+
+    .card3-bg {
+      background: linear-gradient(135deg, #3b588d, #466daf);
+    }
+
+    .card4-bg {
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <div class="card-left card1-bg">
+        <div class="logo">MIKA</div>
+        <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="MIKA">
+      </div>
+      <div class="card-right">
+        <h2>BONNI MAKSUDU</h2>
+        <div class="rating">⭐⭐⭐⭐☆</div>        
+        <h4>Limited Collection</h4>
+        <ul>
+          <li>Can Wash</li>
+          <li>Can Clean</li>
+          <li>Can Cook</li>
+          <li>Loud Mouth</li>
+        </ul>
+        <div class="colors">
+          <strong>Available Colors:</strong><br>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="price">$1.00</div>
+        <button class="buy-btn">BUY NOW</button>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <div class="card-left card2-bg">
+        <div class="logo">AISHA</div>
+        <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="AISHA">
+      </div>
+      <div class="card-right">
+        <h2>GAWAAR MAKSUDU</h2>
+        <div class="rating">⭐⭐⭐☆☆</div>        
+        <h4>Express Edition</h4>
+        <ul>
+          <li>Big Loud Mouth</li>
+          <li>Unexpectedly Poor</li>
+          <li>Dish Cleaning Skill</li>
+          <li>Always ready to deploy</li>
+        </ul>
+        <div class="colors">
+          <strong>Available Colors:</strong><br>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="price">$2.50</div>
+        <button class="buy-btn" style="background-color: #8b1d41;">BUY NOW</button>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <div class="card-left card3-bg">
+        <div class="logo">PALAK</div>
+        <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="PALAK">
+      </div>
+      <div class="card-right">
+        <h2>PALAK MAKSUDU</h2>
+        <div class="rating">⭐⭐⭐⭐⭐</div>        
+        <h4>Premium Pack</h4>
+        <ul>
+          <li>Can Dance</li>
+          <li>Can Draw</li>
+          <li>Can Bake</li>
+          <li>Laughs Loud</li>
+        </ul>
+        <div class="colors">
+          <strong>Available Colors:</strong><br>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="price">$3.00</div>
+        <button class="buy-btn" style="background-color: #062d76;">BUY NOW</button>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+      <div class="card-left card4-bg">
+        <div class="logo">JAY</div>
+        <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="JAY">
+      </div>
+      <div class="card-right">
+        <h2>JAY MAKSUDU</h2>
+        <div class="rating">⭐⭐⭐½☆</div>        
+        <h4>Fun Pack</h4>
+        <ul>
+          <li>Coffee Paglu</li>
+          <li>Can clean your yard better</li>
+          <li>Unexpectedly good at Maths</li>
+          <li>Can be work for 24*7</li>
+        </ul>
+        <div class="colors">
+          <strong>Available Colors:</strong><br>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="price">$1.99</div>
+        <button class="buy-btn" style="background-color: #c09624;">BUY NOW</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #ffffff;
+    }
+
+    .card {
+      display: flex;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+    }
+
+    .card-left {
+      background: linear-gradient(135deg, #38a745, #58c06b);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      flex: 1;
+    }
+
+    .card-left img {
+      max-width: 180px;
+      border-radius: 20px;
+      border: 2px solid white;
+      padding-bottom: 3px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .card-left img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    .logo {
+      font-size: 80px;
+      color: rgba(47, 50, 48, 0.1);
+      font-weight: bold;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+
+    .card-right {
+      padding: 80px;
+      flex: 1;
+    }
+
+    .card-right h2 {
+      color: #53ae47;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .rating {
+      font-size: 18px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .card-right h4 {
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+    .card-right ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .colors {
+      margin-bottom: 20px;
+    }
+
+    .colors span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .colors span:nth-child(1) { background: #8b1d41; }
+    .colors span:nth-child(2) { background: #cd4d2d; }
+    .colors span:nth-child(3) { background: #2f2f2f; }
+    .colors span:nth-child(4) { background: #51555c; }
+
+    .colors span.active {
+      outline: 2px solid black;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #000000;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .buy-btn {
+      background: #40b450;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      transform: scale(1.05);
+      background: #2f923d;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-left">
+      <div class="logo">MIKA</div>
+      <img src="WhatsApp_Image_2025-07-11_at_10.04.11_PM-removebg-preview.png" alt="MIKA">
+    </div>
+    <div class="card-right">
+      <h2>BONNI MAKSUDU</h2>
+      <div class="rating">⭐⭐⭐⭐☆</div>        
+      <h4>Limited Collection</h4>
+      <ul>
+        <li>Can Wash</li>
+        <li>Can Clean</li>
+        <li>Can Cook</li>
+        <li>Loud Mouth</li>
+      </ul>
+
+      <div class="colors">
+        <strong>Available Colors:</strong><br>
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="price">$1.00</div>
+      <button class="buy-btn">BUY NOW</button>
+    </div>
+  </div>
+</body>
+</html>
