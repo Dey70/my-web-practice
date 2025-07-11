@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 150px 100px;
+        }
+        .item{
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+            border: 1px solid rgb(255, 238, 0);
+        }
+        .item1{
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        .item4{
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item item1">A</div>
+        <div class="item item2">B</div>
+        <div class="item item3">C</div>
+        <div class="item item4">D</div>
+        <div class="item item5">E</div>
+        <div class="item item6">F</div>
+        <div class="item item7">G</div>
+    </div>
+</body>
+</html>
