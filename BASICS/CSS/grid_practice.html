@@ -7,22 +7,41 @@
     <style>
         .grid-container{
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 100px 150px 100px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 120px 100px;
+            gap: 5px;
+            align-content: center;
+            
         }
-        .item{
-            background-color: rgb(0, 0, 0);
-            color: #ffffff;
-            border: 1px solid rgb(255, 238, 0);
+        .item {
+            background-color: rgb(199, 35, 221);
+            color: #000000;
+            border: 2px solid rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
         }
         .item1{
+            grid-column: span 4;
+            grid-row: span 1;
+        }
+        .item6{
             grid-column: span 2;
             grid-row: span 1;
         }
-        .item4{
+        .item7{
             grid-column: span 2;
             grid-row: span 1;
         }
+        .item1 { background-color: #6B8E23; color: white; }   /* Olive Green */
+.item2 { background-color: #A0522D; color: white; }   /* Sienna (Earthy Brown) */
+.item3 { background-color: #DEB887; color: black; }   /* Burlywood (Soft Sand) */
+.item4 { background-color: #556B2F; color: white; }   /* Dark Olive Green */
+.item5 { background-color: #8FBC8F; color: black; }   /* Dark Sea Green */
+.item6 { background-color: #BDB76B; color: black; }   /* Dark Khaki */
+.item7 { background-color: #4682B4; color: white; }   /* Steel Blue */
+
 
     </style>
 </head>
